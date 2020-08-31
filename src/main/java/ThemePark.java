@@ -4,6 +4,7 @@ import behaviours.IReviewed;
 import people.Visitor;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ThemePark {
 
@@ -21,4 +22,12 @@ public class ThemePark {
         attraction.setVisitCount(attraction.getVisitCount() + 1);
         visitor.addAttraction(attraction);
     }
+
+//    public HashMap<String, Integer> allReviews() {
+//        HashMap<String, Integer> reviews = new HashMap<String, Integer>();
+//        for (IReviewed place : this.places) {
+//            reviews.put(place.getName(), place.getRating());
+//        }
+//        return reviews;
+//    }
 }
