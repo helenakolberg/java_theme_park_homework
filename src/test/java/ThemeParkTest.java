@@ -35,10 +35,17 @@ public class ThemeParkTest {
         assertEquals(1, attraction.getVisitCount());
     }
 
+    @Test
+    public void canGetNumOfPlaces() {
+        assertEquals(0, themePark.numOfPlaces());
+    }
+
 //    @Test
 //    public void checkAllReviews() {
-//        Park park = new Park("Adventure Park", 5);
-//        IceCreamStall iceCreamStall = new IceCreamStall("Ice Queen", "Janet Jones", ParkingSpot.B2, 4);
-//        themePark.allReviews();
+//        IReviewed park = new Park("Adventure Park", 5);
+//        IReviewed iceCreamStall = new IceCreamStall("Ice Queen", "Janet Jones", ParkingSpot.B2, 4);
+//        HashMap<String, Integer> reviews = themePark.allReviews();
+//        int value1 = reviews.get("Ice Queen");
+//        assertEquals(4, value1);
 //    }
 }

@@ -1,5 +1,4 @@
 import attractions.Attraction;
-import attractions.Park;
 import behaviours.IReviewed;
 import people.Visitor;
 
@@ -21,6 +20,10 @@ public class ThemePark {
     public void visit(Visitor visitor, Attraction attraction) {
         attraction.setVisitCount(attraction.getVisitCount() + 1);
         visitor.addAttraction(attraction);
+    }
+
+    public int numOfPlaces() {
+        return this.places.size();
     }
 
 //    public HashMap<String, Integer> allReviews() {
