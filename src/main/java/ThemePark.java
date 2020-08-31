@@ -30,11 +30,11 @@ public class ThemePark {
         this.places.add(place);
     }
 
-//    public HashMap<String, Integer> allReviews() {
-//        HashMap<String, Integer> reviews = new HashMap<String, Integer>();
-//        for (IReviewed place : this.places) {
-//            reviews.put(place.getName(), place.getRating());
-//        }
-//        return reviews;
-//    }
+    public HashMap<String, Integer> allReviews() {
+        HashMap<String, Integer> reviews = new HashMap<String, Integer>();
+        for (IReviewed place : this.places) {
+            reviews.put(place.getName(), place.getRating());
+        }
+        return reviews;
+    }
 }

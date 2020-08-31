@@ -50,10 +50,14 @@ public class ThemeParkTest {
         assertEquals(1, themePark.numOfPlaces());
     }
 
-//    @Test
-//    public void checkAllReviews() {
-//        HashMap<String, Integer> reviews = themePark.allReviews();
-//        int value1 = reviews.get("Ice Queen");
-//        assertEquals(4, value1);
-//    }
+    @Test
+    public void checkAllReviews() {
+        themePark.addPlace(park);
+        themePark.addPlace(iceCreamStall);
+        HashMap<String, Integer> reviews = themePark.allReviews();
+        int value1 = reviews.get("Ice Queen");
+        int value2 = reviews.get("Adventure Park");
+        assertEquals(4, value1);
+        assertEquals(5, value2);
+    }
 }
