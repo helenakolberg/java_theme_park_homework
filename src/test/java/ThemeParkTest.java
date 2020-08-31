@@ -14,10 +14,14 @@ import static org.junit.Assert.assertEquals;
 public class ThemeParkTest {
 
     ThemePark themePark;
+    IReviewed park;
+    IReviewed iceCreamStall;
 
     @Before
     public void before() {
         themePark = new ThemePark();
+        park = new Park("Adventure Park", 5);
+        iceCreamStall = new IceCreamStall("Ice Queen", "Janet Jones", ParkingSpot.B2, 4);
     }
 
     @Test
@@ -40,10 +44,14 @@ public class ThemeParkTest {
         assertEquals(0, themePark.numOfPlaces());
     }
 
+    @Test
+    public void canAddPlace() {
+        themePark.addPlace(park);
+        assertEquals(1, themePark.numOfPlaces());
+    }
+
 //    @Test
 //    public void checkAllReviews() {
-//        IReviewed park = new Park("Adventure Park", 5);
-//        IReviewed iceCreamStall = new IceCreamStall("Ice Queen", "Janet Jones", ParkingSpot.B2, 4);
 //        HashMap<String, Integer> reviews = themePark.allReviews();
 //        int value1 = reviews.get("Ice Queen");
 //        assertEquals(4, value1);

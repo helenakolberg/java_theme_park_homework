@@ -26,6 +26,10 @@ public class ThemePark {
         return this.places.size();
     }
 
+    public void addPlace(IReviewed place) {
+        this.places.add(place);
+    }
+
 //    public HashMap<String, Integer> allReviews() {
 //        HashMap<String, Integer> reviews = new HashMap<String, Integer>();
 //        for (IReviewed place : this.places) {
